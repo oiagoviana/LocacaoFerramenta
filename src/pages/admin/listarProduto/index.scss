@@ -1,0 +1,119 @@
+.page-listarproduto{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    background-color: #E5E5E5;
+
+    .container-comp{
+        margin-bottom: 1.5em;
+    }
+
+    .container-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 80%;
+    }
+
+    .caixa-busca {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 1em 2.5em;
+        border-radius: 15px;
+        box-shadow: 1px 1px 5px #dcdcdc;
+        width: 40%;
+    }
+
+    .caixa-busca input {
+        background: none;
+        border: none;
+        padding: 0px;
+        width: 100%;
+        outline: 0;
+    }
+
+    .caixa-busca img {
+        cursor: pointer;
+        position: relative;
+        right: -15px;
+    }
+
+    .container-tabela{
+        display: flex;
+        justify-content: center;
+        width: 65%;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 3em;
+    }
+
+    th {
+        text-align: left;
+        color: #fff;
+        padding: 25px 40px;
+        font-size: 14px;
+        text-shadow: 0px 1px 4px rgba(217, 217, 217, 0.5);
+        font-family: 'Roboto3';
+    }
+
+    thead {
+        background-color: #0387A4;
+    }
+
+    td {
+        padding: 25px 40px;
+        font-family: 'Abhaya5';
+        color: #6D6D6D;
+        font-size: 1em;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #EDEDED;
+    }
+
+    tbody tr:hover {
+        background-color: #c5c5c5;
+    }
+
+    td img {
+        width: 18px;
+        cursor: pointer;
+    }
+
+    tr td:nth-child(2) {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap; 
+        width: 100px;
+    }
+
+    tr td:nth-child(1) {
+        color: #606060;
+        font-weight: 700;
+    }
+
+    tr td:nth-last-child(1) * {
+        visibility: hidden;
+    }
+
+    tr:hover td:nth-last-child(1) img {
+        visibility: visible;
+    }
+
+    .imagens{
+        display: flex;
+        flex-direction: row;
+    }
+
+    
+
+   
+
+
+}

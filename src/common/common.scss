@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Abhaya1';
+    src: url(../../public/assets/fonts/AbhayaLibre-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Abhaya2';
+    src: url(../../public/assets/fonts/AbhayaLibre-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Abhaya3';
+    src: url(../../public/assets/fonts/AbhayaLibre-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Abhaya4';
+    src: url(../../public/assets/fonts/AbhayaLibre-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Abhaya5';
+    src: url(../../public/assets/fonts/AbhayaLibre-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto1';
+    src: url(../../public/assets/fonts/RobotoSerif_28pt-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto2';
+    src: url(../../public/assets/fonts/RobotoSerif_28pt-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto3';
+    src: url(../../public/assets/fonts/RobotoSerif_28pt-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto4';
+    src: url(../../public/assets/fonts/RobotoSerif_36pt-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto5';
+    src: url(../../public/assets/fonts/RobotoSerif_36pt-ExtraBold.ttf);
+}
+
+body {
+    margin: 0px;
+}
+
+* {
+	box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

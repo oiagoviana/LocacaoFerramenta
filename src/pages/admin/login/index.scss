@@ -1,0 +1,83 @@
+.page-loginAdm{
+    background-image: url(../../../../public/assets/images/adm1.png);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container-principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100vh;
+        height: 70vh;
+        background-color: #FFFFFF;
+        filter: drop-shadow(8px 6px 4px #00000080);
+        border-radius: 15px;
+    }
+
+    .container-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 15vh;
+        width: 50%;
+    }
+
+    .div-campos{
+        position: relative;
+    }
+
+    div.div-campos label{
+        position: absolute;
+        left: 0;
+        bottom: 5px;
+        color: #969696;
+        cursor: text;
+        transition: 0.5s ease-in-out;
+        font-family: 'Abhaya5';
+    }
+
+    div.div-campos .input{
+        width: 100%;
+        padding: 5px;
+        font-size: 1em;
+        color: #000000;
+        border: 0;
+        border-bottom: 2px solid #c8c8c8;
+        outline: 0;
+    }
+
+    div.div-campos .input:focus,
+    div.div-campos .input:valid{
+        border-bottom: 2px solid #365F63;
+    }
+    
+    div.div-campos .input:focus ~ label,
+    div.div-campos .input:valid ~ label{
+        transform: translateY(-24px);
+        font-size: 14px;        
+        color: #35818E;
+    }
+
+    .login-titulo{
+        color: #35818E;
+        font-family: 'Roboto3';
+        font-size: 2.4em;
+    }
+
+    .botao-entrar{
+        background: #35818E;
+        border: none;
+        border-radius: 10px;
+        width: 35vh;
+        height: 6vh;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: 'Roboto2';
+    }
+}

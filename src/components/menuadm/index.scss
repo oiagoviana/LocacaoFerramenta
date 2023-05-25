@@ -1,0 +1,35 @@
+.comp-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 6em;
+    width: 100vw;
+    background-color: #35818E;
+
+    .a{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 95vw;
+    }
+
+    .container-nomes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100vh;
+    }   
+
+    h3{
+        cursor: pointer;
+        color: #ffffff;
+        font-family: 'Roboto3';
+    }
+
+    .botao-sair{
+        cursor: pointer;
+    }
+
+    
+}
