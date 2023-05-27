@@ -44,7 +44,8 @@
     .container-tabela{
         display: flex;
         justify-content: center;
-        width: 65%;
+        width: 80%;
+
     }
 
     table {
@@ -70,7 +71,7 @@
         padding: 25px 40px;
         font-family: 'Abhaya5';
         color: #6D6D6D;
-        font-size: 1em;
+        font-size: 1.1em;
     }
 
     tbody tr:nth-child(even) {

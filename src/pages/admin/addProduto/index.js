@@ -9,7 +9,7 @@ export default function AdicionarProduto() {
     return (
         <main className="page-addproduto">
             <div className="container-comp">
-                <MenuAdm />
+                <MenuAdm pagina='adicionar'/>
             </div>
 
             <div className="container-info">

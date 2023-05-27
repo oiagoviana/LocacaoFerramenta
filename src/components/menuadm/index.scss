@@ -17,18 +17,26 @@
     .container-nomes{
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
         width: 100vh;
     }   
 
-    h3{
+    
+
+    a, h3{
         cursor: pointer;
         color: #ffffff;
         font-family: 'Roboto3';
+        font-size: 1.17em;
     }
 
     .botao-sair{
         cursor: pointer;
+    }
+
+    .selected{
+        border-bottom: 2px solid white;
     }
 
     

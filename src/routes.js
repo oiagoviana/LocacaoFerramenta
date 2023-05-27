@@ -16,6 +16,7 @@ export default function Index() {
                 <Route path='/admin/login' element={<LoginAdm/>}/>
                 <Route path='/admin/listarProduto' element={<ListarProduto/>}/>
                 <Route path='/admin/adicionarProduto' element={<AdicionarProduto/>}/>
+                <Route path='/admin/alterar/:idParam' element={<AdicionarProduto/>}/>
             </Routes>
         </BrowserRouter>
     )
