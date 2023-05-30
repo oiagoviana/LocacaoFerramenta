@@ -16,7 +16,7 @@ export async function login(email, senha){
 
 export async function inserirProduto(produto){
     const comando = 
-    `INSERT INTO tb_produto	(id_admin, nm_produto, ds_produto, ds_status, dt_produto, id_produto_categoria )
+    `INSERT INTO tb_produto	(id_admin, nm_produto, ds_produto, bt_status, dt_produto, id_produto_categoria )
           VALUES 			(?,?,?,?,curdate(),?);`
     
     const [resposta] = await con.query(comando, 
@@ -45,7 +45,7 @@ export async function atualizarProduto(id, produto){
         SET     id_produto_categoria    = ?,
                 nm_produto              = ?,
                 ds_produto              = ?,
-                ds_status               = ?,
+                bt_status               = ?,
                 id_admin                = ?
       WHERE     id_produto              = ?`
     const [resposta] = await con.query(comando, 
@@ -116,4 +116,23 @@ export async function listarPorNome(nome){
 
     const [resposta] = await con.query(comando, [`%${nome}%`]);
     return resposta;
+}
+
+
+export async function listarPorId(id){
+    const comando = 
+    `SELECT		id_produto		id,
+				nm_produto		nome,
+				ds_produto		descricacao,
+                bt_status		status,
+                date_format(dt_produto, '%d/%m/%Y'),
+                nm_categoria	categoria,
+                img_produto		img,
+                id_admin        admin
+	   FROM		tb_produto
+ INNER JOIN		tb_produto_categoria on tb_produto.id_produto_categoria = tb_produto_categoria.id_produto_categoria
+      WHERE     id_produto      = ?`
+
+    const [resposta] = await con.query(comando, [id]);
+    return resposta[0];
 }

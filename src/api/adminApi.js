@@ -15,13 +15,14 @@ export async function Login(email, senha){
 }
 
 
-export async function cadastrarProduto(nome, descricacao, status, categoria, admin){
+export async function cadastrarProduto(nome, descricacao, statusProduto, categoria, admin){
     const resposta = await api.post('/admin/produto', {
+        admin:admin,
         nome: nome,
         descricacao: descricacao,
-        status: status,
-        categoria:categoria,
-        admin:admin
+        statusProduto: statusProduto,
+        categoria:categoria
+        
     });
 
     return resposta.data;
@@ -42,6 +43,10 @@ export async function enviarImagemProduto(id, imagem){
         },
     })
     return resposta.status;
+}
+
+export function buscarImagem(imagem){
+    return `${api.getUri()}/${imagem}`;
 }
 
 export async function alterarProduto(id, nome, descricacao, status, categoria, admin){
@@ -68,4 +73,8 @@ export async function listarProdutos(){
 export async function listarPorNome(nome){
     const resposta = await api.get(`/admin/produto/busca?nome=${nome}`);
     return resposta.data;
+}
+
+export async function listarProdutoPorId(id){
+    const resposta = await api.get(`/admin/produto/busca/${id}`);
 }
