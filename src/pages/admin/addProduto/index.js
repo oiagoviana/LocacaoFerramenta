@@ -112,10 +112,10 @@ export default function AdicionarProduto() {
                 <div className="container-direita">
                     <div className="sub-container1">
                         <label>Status</label>
-                        <select className='select-info' onChange={(e) => setStatusProduto(e.target.value === 'Sim' ? true : false)} >
+                        <select className='select-info' onChange={(e) => setStatusProduto(e.target.value === 'Disponível' ? true : false)} >
                         <option disabled selected hidden> Selecione</option>
-                        <option>Sim</option>
-                        <option>Não</option>
+                        <option>Disponível</option>
+                        <option>Indisponível</option>
                     </select>
                     </div>
 

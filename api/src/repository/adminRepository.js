@@ -23,7 +23,7 @@ export async function inserirProduto(produto){
         [produto.admin,
          produto.nome,
          produto.descricacao,
-         produto.status,
+         produto.statusProduto,
          produto.categoria]);
 
     produto.id = resposta.insertId;

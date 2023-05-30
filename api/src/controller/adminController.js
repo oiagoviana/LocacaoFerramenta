@@ -31,7 +31,17 @@ server.post('/admin/produto', async (req, resp) => {
 
         console.log(novoProduto);
 
-        
+        if(!novoProduto.nome){
+            throw new Error('Insira um nome');
+        }
+
+        if(!novoProduto.descricacao){
+            throw new Error('Insira uma descrição');
+        }
+
+        if(!novoProduto.categoria){
+            throw new Error('Selecione uma categoria');
+        }
        
         const produtoInserido = await inserirProduto(novoProduto);
 
