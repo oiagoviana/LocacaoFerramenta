@@ -7,6 +7,7 @@ import AdicionarProduto from './pages/admin/addProduto'
 
 
 //usuario
+import InfoProduto from './pages/usuario/infoProduto'
 
 
 export default function Index() {
@@ -17,6 +18,13 @@ export default function Index() {
                 <Route path='/admin/listarProduto' element={<ListarProduto/>}/>
                 <Route path='/admin/adicionarProduto' element={<AdicionarProduto/>}/>
                 <Route path='/admin/alterar/:idParam' element={<AdicionarProduto/>}/>
+                
+                
+                
+                <Route path='/usuario/infoProduto' element={<InfoProduto/>}/>
+
+
+
             </Routes>
         </BrowserRouter>
     )
