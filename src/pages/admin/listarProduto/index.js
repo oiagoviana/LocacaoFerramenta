@@ -56,7 +56,7 @@ export default function ListarProduto() {
         setProduto(resposta);
     }
 
-    console.log(produto);
+    
     useEffect(() => {
         listarTodosProdutos();
     }, [])

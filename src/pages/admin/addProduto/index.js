@@ -92,10 +92,9 @@ export default function AdicionarProduto() {
                         <input type="text" className='input' value={nome} onChange={e => setNome(e.target.value)} />
                     </div>
 
-
                     <div className="sub-container1">
                         <label>Descrição do Produto</label>
-                        <textarea className="text-produto" value={desc} onChange={e => setDesc(e.target.value)} ></textarea>
+                        <textarea maxLength={616} className="text-produto" value={desc} onChange={e => setDesc(e.target.value)} ></textarea>
                     </div>
 
                     <div className="sub-container1">

@@ -21,7 +21,7 @@ export default function Index() {
                 
                 
                 
-                <Route path='/usuario/infoProduto' element={<InfoProduto/>}/>
+                <Route path='/usuario/infoProduto/:idParam' element={<InfoProduto/>}/>
 
 
 

@@ -1,3 +1,97 @@
-.page-infoproduto{
-    
+.page-infoproduto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #E5E5E5;
+    ;
+
+    .container-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 80vh;
+        width: 90vw;
+    }
+
+    .image-produto {
+        width: 300px;
+        border-radius: 10px;
+        border: 1px solid #c0c0c0;
+        max-height: 400px;
+    }
+
+    .div-nome {
+        width: 35vw;
+        height: 55vh;
+    }
+
+    .div-categoria {
+        width: 16vw;
+        height: 25vh;
+    }
+
+    .sub-categoria {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    .sub-categoria p {
+        margin-left: 5px;
+    }
+
+    .linha {
+        border: 1px solid #0387A4;
+        height: 55vh;
+    }
+
+    .div-botao {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 55vh;
+    }
+
+    .botao-orcamento {
+        width: 15vw;
+        height: 6vh;
+        background: #35818E;
+        border: 1px solid #FFFFFF;
+        border-radius: 12px;
+        color: #FFFFFF;
+        font-family: 'Roboto2';
+        cursor: pointer;
+    }
+
+    .text-disp {
+        color: #0387A4;
+        font-family: 'Roboto2';
+    }
+
+    .nome-produto {
+        font-family: 'Roboto2';
+    }
+
+    .desc-produto {
+        font-family: 'Roboto2';
+    }
+
+    .desc {
+        font-family: 'Abhaya3';
+        font-size: 1.1em;
+    }
+
+    .categoria-produto {
+        font-family: 'Roboto2';
+    }
+
+    .categoria {
+        font-family: 'Abhaya3';
+        font-size: 1.3em;
+    }
+
 }

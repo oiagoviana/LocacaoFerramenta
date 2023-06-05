@@ -29,8 +29,6 @@ server.post('/admin/produto', async (req, resp) => {
     try {
         const novoProduto = req.body;
 
-        console.log(novoProduto);
-
         if(!novoProduto.nome){
             throw new Error('Insira um nome');
         }
@@ -137,7 +135,7 @@ server.get('/admin/produto', async (req, resp) => {
 
 server.get('/admin/produto/busca/:id', async (req, resp) => {
     try{
-        const id = Number(req.params.id);
+        const { id } = req.params;
         const resposta = await listarPorId(id);
 
         if(!resposta){

@@ -10,6 +10,7 @@ server.use(express.json());
 
 
 server.use(adminController);
+server.use("/storage/imagensProduto", express.static("storage/imagensProduto"))
 
 
 

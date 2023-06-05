@@ -84,11 +84,11 @@ export async function listarProduto(){
     const comando =
     `SELECT		id_produto		id,
                 nm_produto		nome,
-                ds_produto		descricacao,
+                ds_produto		descricao,
                 bt_status		status,
                 date_format(dt_produto, '%d/%m/%Y') data,
                 nm_categoria	categoria,
-                img_produto		img,
+                img_produto		imagem,
                 id_admin        admin
        FROM		tb_produto
  INNER JOIN		tb_produto_categoria on tb_produto.id_produto_categoria = tb_produto_categoria.id_produto_categoria;`
@@ -104,11 +104,11 @@ export async function listarPorNome(nome){
     const comando = 
     `SELECT		id_produto		id,
 				nm_produto		nome,
-				ds_produto		descricacao,
+				ds_produto		descricao,
                 bt_status		status,
                 date_format(dt_produto, '%d/%m/%Y'),
                 nm_categoria	categoria,
-                img_produto		img,
+                img_produto		imagem,
                 id_admin        admin
 	   FROM		tb_produto
  INNER JOIN		tb_produto_categoria on tb_produto.id_produto_categoria = tb_produto_categoria.id_produto_categoria
@@ -123,11 +123,11 @@ export async function listarPorId(id){
     const comando = 
     `SELECT		id_produto		id,
 				nm_produto		nome,
-				ds_produto		descricacao,
+				ds_produto		descricao,
                 bt_status		status,
                 date_format(dt_produto, '%d/%m/%Y'),
                 nm_categoria	categoria,
-                img_produto		img,
+                img_produto		imagem,
                 id_admin        admin
 	   FROM		tb_produto
  INNER JOIN		tb_produto_categoria on tb_produto.id_produto_categoria = tb_produto_categoria.id_produto_categoria

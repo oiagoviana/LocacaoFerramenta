@@ -45,9 +45,6 @@ export async function enviarImagemProduto(id, imagem){
     return resposta.status;
 }
 
-export function buscarImagem(imagem){
-    return `${api.getUri()}/${imagem}`;
-}
 
 export async function alterarProduto(id, nome, descricacao, status, categoria, admin){
     const resposta = await api.put(`/admin/produto/${id}`, {
@@ -77,4 +74,9 @@ export async function listarPorNome(nome){
 
 export async function listarProdutoPorId(id){
     const resposta = await api.get(`/admin/produto/busca/${id}`);
+    return resposta.data;
+}
+
+export function buscarImagem(imagem) {
+    return `${api.getUri()}/${imagem}`
 }
