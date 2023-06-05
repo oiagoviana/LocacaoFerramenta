@@ -1,0 +1,25 @@
+.input-pesquisa{
+    .caixa-busca {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 1em 2.5em;
+        border-radius: 15px;
+        box-shadow: 1px 1px 5px #dcdcdc;
+        width: 40%;
+    }
+
+    .caixa-busca input {
+        background: none;
+        border: none;
+        padding: 0px;
+        width: 100%;
+        outline: 0;
+    }
+
+    .caixa-busca img {
+        cursor: pointer;
+        position: relative;
+        right: -15px;
+    }
+}
