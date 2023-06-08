@@ -1,15 +1,19 @@
 import './index.scss'
 import '../../../common/common.scss'
 import MenuAdm from '../../../components/menuadm'
+import EnviarEmail from '../../../components/enviarEmail';
 import { useEffect, useState } from 'react';
 import { buscarImagem, listarProdutoPorId } from '../../../api/adminApi';
 import { useParams } from 'react-router-dom';
-
+import Modal from 'react-modal'
 
 
 export default function InfoProduto() {
+    const [modalIsOpen, setIsOpen] = useState(false);
     const [produto, setProduto] = useState({});
     const { idParam } = useParams();
+
+    Modal.setAppElement('#root');
 
 
     useEffect(() => {
@@ -22,6 +26,36 @@ export default function InfoProduto() {
         setProduto(resposta);
     }
 
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
+    const Css = {
+        content: {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItens: 'center',
+            justifyContent: 'center',
+            left: '20%',
+            top: '20%',
+            margin: 'none',
+            width: '60vw',
+            backgroundColor: '#FFFFFF',
+            height: '60vh',
+
+        },
+        overlay: {
+            backgroundColor: '#000000ce'
+        },
+
+
+
+    };
+
     return (
         <main className='page-infoproduto'>
             <div className="container-comp">
@@ -29,9 +63,9 @@ export default function InfoProduto() {
             </div>
 
             <div className='container-info'>
-                
-                    <img src={buscarImagem(produto.imagem)} alt='' className='image-produto' />
-                
+
+                <img src={buscarImagem(produto.imagem)} alt='' className='image-produto' />
+
 
                 <div className='div-nome'>
                     <h1 className='nome-produto'>{produto.nome}</h1>
@@ -51,7 +85,21 @@ export default function InfoProduto() {
                         <h2 className='text-disp'>{produto.status ? "Disponível" : "Indisponível"}</h2>
                     </div>
 
-                    <button className='botao-orcamento'>Solicitar Orçamento</button>
+                    <div>
+                        <button className='botao-orcamento' onClick={openModal} >Solicitar Orçamento</button>
+
+                        <div>
+                            <Modal  isOpen={modalIsOpen}
+                                    onRequestClose={closeModal}
+                                    style={Css}>
+                                    <EnviarEmail/>
+                            </Modal>
+                        </div>
+                    
+                    </div>
+
+
+
 
                 </div>
             </div>

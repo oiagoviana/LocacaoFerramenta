@@ -1,0 +1,68 @@
+.modal-enviaremail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #ffffff;
+
+    .container-nome-coment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 6vh;
+        width: 15vw;
+        border-radius: 5px;
+        background-color: #35818E;
+        color: #ffffff;
+        font-family: 'Roboto1';
+    }
+
+    .container-infos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30vw;
+        height: 30vh;
+    }
+
+    .sub-infos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sub-infos label{
+        color: #35818E;
+        font-family: 'Roboto2';
+    }
+
+    .sub-infos .input{
+        border: 1px solid #9F9F9F;
+        border-radius: 5px;
+        height: 4vh;
+        padding: 5px;
+    }
+
+    div.sub-infos .input:focus,
+    div.sub-infos .input:valid{
+        border: 2px solid #365F63;
+    }
+
+
+    .botao-comentario{
+        width: 10vw;
+        height: 5vh;
+        font-family: 'Roboto2';
+        font-size: 1.1em;
+        color: #FFFFFF;
+        border-radius: 8px;
+        background: #35818E;
+        border: none;
+        cursor: pointer;
+    }
+
+
+    
+}
