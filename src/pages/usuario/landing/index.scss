@@ -1,0 +1,121 @@
+.container-lading{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    .container1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #F4F4F4;
+        height: 85vh;
+    }
+
+    .sub1-texto{
+        width: 40vw;
+        height: 40vh;
+    }
+
+    .sub1-texto h1{
+        font-size: 3em;
+        font-family: 'Roboto4';
+    }
+
+    .sub1-texto h3{
+        font-size: 1.5em;
+        font-family: 'Roboto3';
+    }
+
+    .sub1-texto p{
+        font-size: 1.4em;
+        font-family: 'Abhaya2';
+    }
+
+    .sub1-imagem{
+        background-color: #D9D9D9;
+        width: 30vw;
+        height: 45vh;
+    }
+
+    .container2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+    }
+
+    .container2 h1{
+        font-size: 3em;
+    }
+
+    .sub2-caixinhas{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 85vw;
+
+    }
+
+    .sub2-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #D9D9D9;
+        border-radius: 10px;
+        width: 25vw;
+        height: 45vh;
+        padding: 0px  15px 0px 15px;
+    }
+
+    .sub2-card h3{
+        font-size: 1.6em;
+        font-family: 'Roboto3';
+    }
+
+    .sub2-card p {
+        font-size: 1.5em;
+        word-spacing: 5px;
+        font-family: 'Abhaya3';
+    }
+
+    .container3{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #F4F4F4;
+        height: 100vh;
+    }
+
+    .sub3-infos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40vw;
+        height: 50vh;
+        margin-bottom: 2em;
+    }
+
+    .sub3-infos h1{
+        font-size: 2.5em;
+    }
+
+    .sub3-infos p{
+        font-size: 1.2em;
+        width: 30vw;
+        margin-bottom: 2em;
+    }
+
+    .sub3-infos button{
+        width: 15vw;
+        height: 6vh;
+        background: #35818E;
+        border: 1px solid #FFFFFF;
+        border-radius: 12px;
+        color: #FFFFFF;
+        font-family: 'Roboto2';
+        cursor: pointer;
+    }
+}

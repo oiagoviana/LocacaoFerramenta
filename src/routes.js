@@ -9,7 +9,7 @@ import AdicionarProduto from './pages/admin/addProduto'
 //usuario
 import InfoProduto from './pages/usuario/infoProduto'
 import Feed from './pages/usuario/feed'
-
+import LadingPage from './pages/usuario/landing'
 
 export default function Index() {
     return (
@@ -22,6 +22,7 @@ export default function Index() {
                 
                 
                 
+                <Route path='/' element={<LadingPage/>}/>
                 <Route path='/usuario/infoProduto/:idParam' element={<InfoProduto/>}/>
                 <Route path='/usuario/feed' element={<Feed/>}/>
 

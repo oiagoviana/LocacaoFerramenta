@@ -35,9 +35,9 @@ export default function AdicionarProduto() {
                 await enviarImagemProduto(produto.id, imagem);
 
                 setId(produto.id);
-                /*setTimeout(() => {
+                setTimeout(() => {
                     navigate('/admin/listarProduto');
-                }, 2000)*/
+                }, 2000)
                 toast.dark('Produto cadastrado com sucesso!');
             } else {
                 await alterarProduto(id, nome, desc, idCategoria, statusProduto, admin);

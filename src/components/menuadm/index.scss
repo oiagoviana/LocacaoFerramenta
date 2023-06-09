@@ -3,11 +3,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 6em;
+    height: 15vh;
     width: 100vw;
     background-color: #35818E;
 
-    .a{
+    
+
+
+    .container{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -21,8 +24,6 @@
         justify-content: space-between;
         width: 100vh;
     }   
-
-    
 
     a, h3{
         cursor: pointer;

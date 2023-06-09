@@ -13,7 +13,7 @@ export default function MenuAdm({pagina}) {
 
     return (
         <main className="comp-menu">
-            <div className="a">
+            <div className="container">
                 <h3 className='bemvindo'>Bem-Vindo Iago</h3>
 
                 <div className="container-nomes">
