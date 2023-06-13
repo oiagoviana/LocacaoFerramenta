@@ -1,44 +1,47 @@
-.container-lading{
+.container-lading {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-
-    .container1{
+    
+   
+    .container1 {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
         background-color: #F4F4F4;
-        height: 85vh;
+        height: 100vh;
     }
 
-    .sub1-texto{
+    .sub1-texto {
         width: 40vw;
         height: 40vh;
     }
 
-    .sub1-texto h1{
+    .sub1-texto h1 {
         font-size: 3em;
         font-family: 'Roboto4';
     }
 
-    .sub1-texto h3{
+    .sub1-texto h3 {
         font-size: 1.5em;
         font-family: 'Roboto3';
     }
 
-    .sub1-texto p{
+    .sub1-texto p {
         font-size: 1.4em;
         font-family: 'Abhaya2';
     }
 
-    .sub1-imagem{
+    .sub1-imagem {
         background-color: #D9D9D9;
         width: 30vw;
         height: 45vh;
     }
 
-    .container2{
+    //--------------------------------
+
+    .container-sobre-nos {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -46,19 +49,18 @@
         height: 100vh;
     }
 
-    .container2 h1{
+    .container-sobre-nos h1 {
         font-size: 3em;
     }
 
-    .sub2-caixinhas{
+    .sub2-caixinhas {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 85vw;
-
     }
 
-    .sub2-card{
+    .sub2-card {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -66,10 +68,10 @@
         border-radius: 10px;
         width: 25vw;
         height: 45vh;
-        padding: 0px  15px 0px 15px;
+        padding: 0px 15px 0px 15px;
     }
 
-    .sub2-card h3{
+    .sub2-card h3 {
         font-size: 1.6em;
         font-family: 'Roboto3';
     }
@@ -80,7 +82,9 @@
         font-family: 'Abhaya3';
     }
 
-    .container3{
+    //-------------------
+
+    .container-feed {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -89,7 +93,7 @@
         height: 100vh;
     }
 
-    .sub3-infos{
+    .sub3-infos {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -98,17 +102,87 @@
         margin-bottom: 2em;
     }
 
-    .sub3-infos h1{
+    .sub3-infos h1 {
         font-size: 2.5em;
+        font-family: 'Roboto3';
     }
 
-    .sub3-infos p{
-        font-size: 1.2em;
+    .sub3-infos p {
+        font-size: 1.4em;
         width: 30vw;
         margin-bottom: 2em;
+        font-family: 'Abhaya4';
     }
 
-    .sub3-infos button{
+    .sub3-infos .botao-feed {
+        width: 15vw;
+        height: 6vh;
+        background: #35818E;
+        border: 1px solid #FFFFFF;
+        border-radius: 12px;
+        color: #FFFFFF;
+        font-family: 'Roboto2';
+        cursor: pointer;
+    }
+
+    //---------------------
+
+    .container-contato {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #e7e7e7;
+        height: 70vh;
+    }
+
+    .sub-infos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 30vh;
+        margin-bottom: 5em;
+    }
+
+
+    .sub-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 40vw;
+        height: 50vh;
+    }
+
+    input,
+    textarea {
+        outline: 0;
+        resize: none;
+        width: 40vw;
+    }
+
+    textarea {
+        border: 1px solid #9F9F9F;
+        border-radius: 10px;
+        height: 15vh;
+        resize: none;
+        padding: 10px;
+    }
+
+    .sub-form input {
+        border: 1px solid #9F9F9F;
+        border-radius: 5px;
+        height: 5vh;
+        padding: 5px;
+    }
+
+    div.sub-form input:focus,
+    textarea:focus,
+    select:focus {
+        border: 2px solid #35818E;
+    }
+
+    .botao-enviar{
         width: 15vw;
         height: 6vh;
         background: #35818E;

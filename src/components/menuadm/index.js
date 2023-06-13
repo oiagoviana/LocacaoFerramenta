@@ -2,8 +2,10 @@ import './index.scss'
 import '../../common/common.scss'
 import storage from 'local-storage';
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 export default function MenuAdm({pagina}) {
+    const [admin, setAdmin] = useState('-');
     const navigate = useNavigate();
 
     function sairClick(){
@@ -11,10 +13,21 @@ export default function MenuAdm({pagina}) {
         navigate('/admin/login');
     }
 
+    useEffect(() => {
+        if(!storage('admin-logado')){
+            navigate('/admin/login')
+        } else{
+            const adminLogado = storage('admin-logado');
+            setAdmin(adminLogado.nome)
+        }
+    }, [])
+
+
+
     return (
         <main className="comp-menu">
             <div className="container">
-                <h3 className='bemvindo'>Bem-Vindo Iago</h3>
+                <h3 className='bemvindo'>Bem-Vindo, {admin} </h3>
 
                 <div className="container-nomes">
 

@@ -11,9 +11,9 @@ export default function MenuUsuario() {
                 </div>
 
                 <div className='container-opcao'>
-                    <p>SOBRE NÓS</p>
-                    <p>FEED</p>
-                    <p>CONTATO</p>
+                    <a href='#sobre-nos'>SOBRE NÓS</a>
+                    <a href='#feed'>FEED</a>
+                    <a href='#contato'>CONTATO</a>
                 </div>
             </div>
         </main>
