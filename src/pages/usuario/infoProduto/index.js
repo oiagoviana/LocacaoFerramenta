@@ -58,9 +58,19 @@ export default function InfoProduto() {
 
     return (
         <main className='page-infoproduto'>
-            <div className="container-comp">
-                <MenuAdm />
+            <header className='comp-menuUsuario'>
+            <div className='container'>
+                <div>
+                    <h3>LOGO</h3>
+                </div>
+
+                <div className='container-opcao'>
+                    <a href='/#sobre-nos'>SOBRE NÓS</a>
+                    <a href='/#feed'>FEED</a>
+                    <a href='/#contato'>CONTATO</a>
+                </div>
             </div>
+        </header>
 
             <div className='container-info'>
 

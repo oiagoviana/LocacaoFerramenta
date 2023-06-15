@@ -1,6 +1,6 @@
 import './index.scss'
 import '../../../common/common.scss'
-import MenuAdm from '../../../components/menuadm';
+import MenuUsuario from '../../../components/menuusuario';
 import { useEffect, useState } from 'react';
 import { buscarImagem, listarPorNome, listarProdutos } from '../../../api/adminApi';
 import { useNavigate } from 'react-router-dom';
@@ -34,9 +34,19 @@ export default function Feed() {
 
     return (
         <main className='page-feed'>
-            <div className="container-comp">
-                <MenuAdm />
+            <header className='comp-menuUsuario'>
+            <div className='container'>
+                <div>
+                    <h3>LOGO</h3>
+                </div>
+
+                <div className='container-opcao'>
+                    <a href='/#sobre-nos'>SOBRE NÓS</a>
+                    <a href='/#feed'>FEED</a>
+                    <a href='/#contato'>CONTATO</a>
+                </div>
             </div>
+        </header>
 
             <div className='page-container'>
                 <div className="caixa-busca">

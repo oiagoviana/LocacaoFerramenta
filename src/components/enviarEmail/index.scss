@@ -22,15 +22,18 @@
 
     .container-infos{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
-        width: 30vw;
+        justify-content: space-around;
+        width: 50vw;
         height: 30vh;
     }
 
     .sub-infos{
         display: flex;
         flex-direction: column;
+        height: 10vh;
+        width: 25vw;
     }
 
     .sub-infos label{
@@ -45,11 +48,6 @@
         padding: 5px;
     }
 
-    div.sub-infos .input:focus,
-    div.sub-infos .input:valid{
-        border: 2px solid #365F63;
-    }
-
 
     .botao-comentario{
         width: 10vw;
@@ -62,6 +60,31 @@
         border: none;
         cursor: pointer;
     }
+
+    .sub-infoss{
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+    }
+
+    .sub-infoss label{
+        color: #35818E;
+        font-family: 'Roboto2';
+    }
+
+    .sub-infoss textarea{
+        border: 1px solid #9F9F9F;
+        border-radius: 5px;
+        height: 15vh;
+        padding: 5px;
+        resize: none;
+    }
+
+    div.sub-infos input:focus,
+    div.sub-infoss textarea:focus {
+        border: 2px solid #35818E;
+    }
+    
 
 
     

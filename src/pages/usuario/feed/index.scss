@@ -7,6 +7,38 @@
     max-height: max-content;
     overflow: hidden;
 
+    .comp-menuUsuario{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 13vh;
+        width: 100vw;
+        background-color: #35818E;
+        
+        
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 60vw;
+            margin-left: 2em;
+        }
+    
+        .container-opcao{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 25vw;
+        }
+    
+        .container-opcao a {
+            color: #ffffff;
+            font-family: 'Roboto2';
+        }
+    
+    }
+
 
     .page-container{
         display: flex;
