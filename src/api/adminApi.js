@@ -80,3 +80,15 @@ export async function listarProdutoPorId(id){
 export function buscarImagem(imagem) {
     return `${api.getUri()}/${imagem}`
 }
+
+export async function enviarEmail(nome,de,assunto,texto, telefone){
+    const resposta = await api.post('/enviarEmail', {
+        nome:nome,
+        from:de,
+        subject:assunto,
+        text:texto,
+        telefone:telefone,
+        to:"franciscosantos29@gmail.com"
+    })
+    return resposta.data;
+}

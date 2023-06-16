@@ -173,7 +173,7 @@ server.get('/admin/produto/busca', async (req, resp) => {
 
 server.post('/enviarEmail', (req, resp) => {
     try {
-        const { nome, from, to, subject, text } = req.body;
+        const { nome, from, to, subject, text, telefone } = req.body;
         const transport = nodemailer.createTransport({
             host: SMTP_CONFIG.host,
             port: SMTP_CONFIG.port,
@@ -188,11 +188,10 @@ server.post('/enviarEmail', (req, resp) => {
         })
 
         transport.sendMail({
-            nome:nome,
-            from: `<${from}>`,
+            from: `${nome} <${from}>`,
             to: to,
             subject: subject,
-            text: text
+            text: `${text} <br/>*${telefone}*`,
         })
 
 

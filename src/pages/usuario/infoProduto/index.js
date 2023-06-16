@@ -40,10 +40,10 @@ export default function InfoProduto() {
             flexDirection: 'column',
             alignItens: 'center',
             justifyContent: 'center',
-            left: '20%',
+            left: '15%',
             top: '20%',
             margin: 'none',
-            width: '60vw',
+            width: '70vw',
             backgroundColor: '#FFFFFF',
             height: '60vh',
 
