@@ -88,7 +88,7 @@ export async function enviarEmail(nome,de,assunto,texto, telefone){
         subject:assunto,
         text:texto,
         telefone:telefone,
-        to:"franciscosantos29@gmail.com"
+        to:"iago.tangara5663@gmail.com"
     })
     return resposta.data;
 }

@@ -59,59 +59,55 @@ export default function InfoProduto() {
     return (
         <main className='page-infoproduto'>
             <header className='comp-menuUsuario'>
-            <div className='container'>
-                <div>
-                    <h3>LOGO</h3>
-                </div>
+                <div className='container'>
+                    <div>
+                        <h3>LOGO</h3>
+                    </div>
 
-                <div className='container-opcao'>
-                    <a href='/#sobre-nos'>SOBRE NÓS</a>
-                    <a href='/#feed'>FEED</a>
-                    <a href='/#contato'>CONTATO</a>
+                    <div className='container-opcao'>
+                        <a href='/#sobre-nos'>SOBRE NÓS</a>
+                        <a href='/#feed'>FEED</a>
+                        <a href='/#contato'>CONTATO</a>
+                    </div>
                 </div>
-            </div>
-        </header>
+            </header>
 
             <div className='container-info'>
-
-                <img src={buscarImagem(produto.imagem)} alt='' className='image-produto' />
-
-
-                <div className='div-nome'>
-                    <h1 className='nome-produto'>{produto.nome}</h1>
-                    <h2 className='desc-produto'>Descrição do Produto:</h2>
-                    <p className='desc'>{produto.descricao}</p>
+                <div className='container-esq'>
+                    <div>
+                    <img src={buscarImagem(produto.imagem)} alt='' className='image-produto' />
+                    </div>
+                    <div className='div-nome'>
+                        <h1 className='nome-produto'>{produto.nome}</h1>
+                        <h2 className='desc-produto'>Descrição do Produto:</h2>
+                        <p className='desc'>{produto.descricao}</p>
+                    </div>
                 </div>
 
                 <div className='linha'></div>
 
-                <div className='div-botao'>
-                    <div className='div-categoria'>
-                        <div className='sub-categoria'>
-                            <h2 className='categoria-produto'>Categoria:</h2>
-                            <p className='categoria'>{produto.categoria}</p>
+                    <div className='div-direita'>
+                        <div className='div-categoria'>
+                            <div className='sub-categoria'>
+                                <h2 className='categoria-produto'>Categoria:</h2>
+                                <p className='categoria'>{produto.categoria}</p>
+                            </div>
+                            <h2 className='text-disp'>{produto.status ? "Disponível" : "Indisponível"}</h2>
                         </div>
-
-                        <h2 className='text-disp'>{produto.status ? "Disponível" : "Indisponível"}</h2>
-                    </div>
-
-                    <div>
-                        <button className='botao-orcamento' onClick={openModal} >Solicitar Orçamento</button>
 
                         <div>
-                            <Modal  isOpen={modalIsOpen}
+                            <div className='button'>
+                                <button className='botao-orcamento' onClick={openModal} >Solicitar Orçamento</button>
+                            </div>
+                            <div>
+                                <Modal isOpen={modalIsOpen}
                                     onRequestClose={closeModal}
                                     style={Css}>
-                                    <EnviarEmail/>
-                            </Modal>
+                                    <EnviarEmail />
+                                </Modal>
+                            </div>
                         </div>
-                    
                     </div>
-
-
-
-
-                </div>
             </div>
         </main>
     );

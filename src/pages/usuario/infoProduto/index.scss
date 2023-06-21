@@ -6,36 +6,35 @@
     height: 100vh;
     background-color: #E5E5E5;
 
-    .comp-menuUsuario{
+    .comp-menuUsuario {
         display: flex;
         flex-direction: row;
         align-items: center;
         height: 13vh;
         width: 100vw;
         background-color: #35818E;
-        
-        
-        .container{
+
+        .container {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             width: 60vw;
             margin-left: 2em;
         }
-    
-        .container-opcao{
+
+        .container-opcao {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
             width: 25vw;
         }
-    
+
         .container-opcao a {
             color: #ffffff;
             font-family: 'Roboto2';
         }
-    
+
     }
 
     .container-info {
@@ -44,11 +43,18 @@
         align-items: center;
         justify-content: space-evenly;
         height: 80vh;
-        width: 90vw;
+        width: 100vw;
+    }
+
+    .container-esq {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 65vw;
     }
 
     .image-produto {
-        width: 300px;
+        width: 400px;
         border-radius: 10px;
         border: 1px solid #c0c0c0;
         max-height: 400px;
@@ -59,16 +65,10 @@
         height: 55vh;
     }
 
-    .div-categoria {
-        width: 16vw;
-        height: 25vh;
-    }
-
     .sub-categoria {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-top: 1em;
     }
 
     .sub-categoria p {
@@ -80,7 +80,7 @@
         height: 55vh;
     }
 
-    .div-botao {
+    .div-direita {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -123,6 +123,149 @@
     .categoria {
         font-family: 'Abhaya3';
         font-size: 1.3em;
+    }
+
+    @media(max-width:1390px){
+        
+        .container-esq{
+            width: 70vw;
+        }
+    }
+
+    @media(max-width:1175px) {
+
+        .container-esq{
+            width: 70vw;
+        }
+
+        .image-produto{
+            width: 350px;
+        }
+    }
+
+
+    @media(max-width: 1050px) {
+
+        .container-esq {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 50vw;
+        }
+
+        .div-nome {
+            height: 30vh;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+        }
+
+        .botao-orcamento{
+            width: 25vw;
+        }
+
+        .nome-produto {
+            font-size: 1.8em;
+        }
+
+        .desc-produto {
+            font-size: 1.2em;
+        }
+
+        .desc {
+            font-size: 1em;
+        }
+
+        .categoria-produto {
+            font-size: 1.4em;
+        }
+
+        .text-disp {
+            font-size: 1.4em;
+        }
+    }
+
+    @media(max-width: 700px) {
+        .container-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .container-esq {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 85%;
+            height: 45vh;
+        }
+
+        .div-nome{
+            height: 30vh;
+            max-height: 45vh;
+            width: 45vw;
+        }
+
+        .nome-produto{
+            font-size: 1.3em;
+        }
+
+        .desc-produto{
+            font-size: 1em;
+        }
+
+        .image-produto{
+            width: 220px;
+        }
+
+        .linha {
+            display: none;
+        }
+
+        .div-direita {
+            align-items: center;
+            width: 75vw;
+            height: 30vh;
+        }
+
+        .div-categoria{
+            width: 100%;
+        }
+
+        .botao-orcamento {
+            width: 35vw;
+        }
+    }
+
+    @media(max-width: 570px) {
+
+        .container-esq{
+            width: 95vw;
+        }
+    }
+
+    @media(max-width: 460px) {
+
+        .container-esq{
+            display: flex;
+            flex-direction: column;
+            height: 45vh;
+        }
+
+        .div-nome{
+            width: 75vw;
+        }
+
+        .botao-orcamento{
+            width: 45vw;
+        }
+
+        .categoria-produto{
+            font-size: 1.4em;
+        }
     }
 
 }

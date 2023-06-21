@@ -4,6 +4,7 @@
     height: 100vh;
     align-items: center;
     background-color: #E5E5E5;
+    overflow-x: hidden;
 
     .container-info {
         display: flex;
@@ -12,7 +13,6 @@
         justify-content: space-between;
         width: 75vw;
         height: 70vh;
-        //border: 1px solid blue;
     }
     
 
@@ -80,13 +80,6 @@
         margin-top: 1em;
     }
 
-    .sub-container2 .input-check{
-        border: 1px solid red;
-        height: 2vh;
-        width: 1vw;
-    }
-
-
     .container-direita {
         display: flex;
         flex-direction: column;
@@ -95,8 +88,6 @@
         width: 25vw;
 
     }
-
-
 
     .imagem-indicacao {
         display: flex;
@@ -132,6 +123,65 @@
         font-family: 'Roboto2';
         cursor: pointer;
     }
+
+    @media(max-width:1000px) {
+        .botao-add{
+            width: 25vw;
+        }
+    }
+
+    @media(max-width: 654px) {
+
+        .container-info{
+            height: 65vh;
+        }
+
+        .botao-add{
+            width: 35vw;
+        }
+
+
+        label{
+            font-size: 0.96em;
+        }
+    }
+
+    @media(max-width: 550px){
+        height: 125vh;
+
+        .container-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-wrap: wrap;
+        }
+
+        .container-esquerda{
+            height: 40vh;
+            margin-bottom: 4em;
+            width: 45vw;
+        }
+
+        .container-direita{
+            height: 45vh;
+            width: 45vw;
+        }
+
+        .imagem-indicacao{
+            width: 45vw;
+        }
+
+        .imagem-capa{
+            width: 30vw;
+        }
+
+        .botao-add{
+            width: 40vw;
+        }
+    }
+
 
    
 

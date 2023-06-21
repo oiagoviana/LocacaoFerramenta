@@ -73,14 +73,14 @@ export default function ListarProduto() {
                 </div>
 
                 <div className="container-tabela">
-                    <table>
+                    <table className='tabela'>
                         <thead>
                             <tr>
                                 <th>IDENTIFICAÇÃO</th>
                                 <th>PRODUTO</th>
                                 <th>CATEGORIA</th>
                                 <th>STATUS</th>
-                                <th>DATA DE CRIAÇÃO</th>
+                                <th className='data'>DATA DE CRIAÇÃO</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -92,11 +92,11 @@ export default function ListarProduto() {
                                     <td> {item.nome} </td>
                                     <td> {item.categoria} </td>
                                     <td> {item.status ? 'Disponível' : 'Indisponível' }</td>
-                                    <td> {item.data ? item.data.substr(0, 10) : ''} </td>
+                                    <td className='data'> {item.data ? item.data.substr(0, 10) : ''} </td>
                                     <td className="imagens">
-                                        <img src="/assets/images/edit.svg" alt="" onClick={e => { e.stopPropagation(); editarFilme(item.id) }} />
+                                        <img src="/assets/images/edit.svg" alt="" className='edit' onClick={e => { e.stopPropagation(); editarFilme(item.id) }} />
                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <img src="/assets/images/remove.svg" alt="" onClick={e => { e.stopPropagation(); removerProdutoClick(item.id, item.nome) }} />
+                                        <img src="/assets/images/remove.svg" alt="" className='remove' onClick={e => { e.stopPropagation(); removerProdutoClick(item.id, item.nome) }} />
                                     </td>
                                 </tr>
 
