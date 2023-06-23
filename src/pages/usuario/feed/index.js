@@ -22,7 +22,7 @@ export default function Feed() {
         setProduto(resposta);
     }
 
-    function abrirInfoProduto(id){
+    function abrirInfoProduto(id) {
         navigate(`/usuario/infoProduto/${id}`);
     }
 
@@ -35,18 +35,18 @@ export default function Feed() {
     return (
         <main className='page-feed'>
             <header className='comp-menuUsuario'>
-            <div className='container'>
-                <div>
-                    <h3>LOGO</h3>
-                </div>
+                <div className='container'>
+                    <div>
+                        <h3>LOGO</h3>
+                    </div>
 
-                <div className='container-opcao'>
-                    <a href='/#sobre-nos'>SOBRE NÓS</a>
-                    <a href='/#feed'>FEED</a>
-                    <a href='/#contato'>CONTATO</a>
+                    <div className='container-opcao'>
+                        <a href='/#sobre-nos'>SOBRE NÓS</a>
+                        <a href='/#feed'>FEED</a>
+                        <a href='/#contato'>CONTATO</a>
+                    </div>
                 </div>
-            </div>
-        </header>
+            </header>
 
             <div className='page-container'>
                 <div className="caixa-busca">
@@ -67,7 +67,7 @@ export default function Feed() {
                             </div>
 
                             <div className='sub-botao'>
-                                <button className='botao-orcamento' onClick={e => {e.stopPropagation(); abrirInfoProduto(item.id)}} >Faça seu orçamento</button>
+                                <button className='botao-orcamento' onClick={e => { e.stopPropagation(); abrirInfoProduto(item.id) }} >Faça seu orçamento</button>
                             </div>
                         </div>
                     )}

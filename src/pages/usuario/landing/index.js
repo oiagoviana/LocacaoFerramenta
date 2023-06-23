@@ -86,6 +86,11 @@ export default function LadingPage() {
                 </div>
             </div>
 
+
+            <div className='container-rodape'>
+
+            </div>
+
         </main>
     )
 }

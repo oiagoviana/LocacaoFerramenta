@@ -1,4 +1,4 @@
-.page-feed{
+.page-feed {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,45 +7,45 @@
     max-height: max-content;
     overflow: hidden;
 
-    .comp-menuUsuario{
+    .comp-menuUsuario {
         display: flex;
         flex-direction: row;
         align-items: center;
         height: 13vh;
         width: 100vw;
         background-color: #35818E;
-        
-        
-        .container{
+
+
+        .container {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             width: 60vw;
             margin-left: 2em;
         }
-    
-        .container-opcao{
+
+        .container-opcao {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
             width: 25vw;
         }
-    
+
         .container-opcao a {
             color: #ffffff;
             font-family: 'Roboto2';
         }
-    
+
     }
 
-
-    .page-container{
+    .page-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 1em;
         width: 100%;
+        border: 1px solid #E5E5E5;
     }
 
     .caixa-busca {
@@ -71,15 +71,18 @@
         position: relative;
         right: -15px;
     }
-    .sub-image{
+
+    .sub-image {
+        display: flex;
+        align-items: center;
         height: 22vh;
     }
 
-    .sub-image img{
+    .sub-image img {
         width: 100px;
     }
 
-    .container-card{
+    .container-card {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -87,7 +90,7 @@
         width: 80%;
     }
 
-    .div-card{
+    .div-card {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -101,22 +104,22 @@
         margin: 1em 0em 1em 0em;
     }
 
-    .sub-info{
+    .sub-info {
         width: 15vw;
         height: 30vh;
     }
 
-    .sub-titulo{
+    .sub-titulo {
         color: #35818E;
         font-family: 'Roboto4';
     }
 
-    .sub-desc{
+    .sub-desc {
         font-size: 14px;
         font-family: 'Abhaya4';
     }
 
-    .botao-orcamento{
+    .botao-orcamento {
         background: #35818E;
         border-radius: 10px;
         color: #FFFFFF;
@@ -126,4 +129,156 @@
         height: 5vh;
         width: 14vw;
     }
+
+
+    @media(max-width:1050px) {
+
+        .sub-titulo{
+            font-size: 1em;
+        }
+
+        .sub-desc{
+            font-size: 0.8em;
+        }
+
+        .botao-orcamento{
+            font-size: 0.75em;
+        }
+
+        .caixa-busca{
+            width: 50vw;
+        }
+
+        .div-card{
+            width: 23vw;
+        }
+    }
+
+    @media(max-width: 920px) {
+        
+        .container-card{
+            width: 75vw;
+        }
+
+        .div-card{
+            width: 28vw;
+            padding: 5px 0px;
+        }
+
+        .sub-info{
+            width: 20vw;
+        }
+
+        .botao-orcamento{
+            width: 18vw;
+        }
+
+    }
+
+    @media(max-width: 800px){
+        
+        .sub-desc{
+            font-size: 0.8em;
+        }
+
+    }
+
+    @media(max-width: 714px){
+
+          .container-card{
+            width: 85vw;
+          }  
+
+          .div-card{
+            width: 35vw;
+          }
+
+          .botao-orcamento{
+            width: 20vw;
+          }
+    }
+
+    @media(max-width: 665px) {
+        
+        .caixa-busca{
+            width: 60vw;
+        }
+
+        .sub-desc{
+            font-size: 0.79em;
+        }
+
+        .sub-info{
+            width: 24vw;
+        }
+
+        .botao-orcamento{
+            width: 23vw;
+        }
+    }
+
+    @media(max-width:570px) {
+
+        .div-card{
+            width: 40vw;
+        }
+
+        .sub-info{
+            width: 27vw;
+        }
+
+        .botao-orcamento{
+            width: 27vw;
+            font-size: 0.7em;
+        }
+
+        .caixa-busca{
+            width: 70vw;
+        }
+    }
+
+    @media(max-width:460px) {
+
+        .container-card{
+            width: 95vw;
+        }
+
+        .div-card{
+            width: 45vw;
+        }
+
+        .sub-info{
+            width: 33vw;
+        }
+
+        .botao-orcamento{
+            width: 31vw;
+        }
+    }
+
+    @media(max-width: 390px){
+
+        .container-card{
+            width: 80vw;
+        }
+
+        .div-card{
+            width: 60vw;
+        }
+
+        .sub-info{
+            width: 40vw;
+        }
+
+        .botao-orcamento{
+            width: 40vw;
+        }
+
+        .caixa-busca{
+            width: 75vw;
+        }
+    }
+
+
+
 }
