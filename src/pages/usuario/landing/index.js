@@ -2,16 +2,47 @@ import './index.scss'
 import '../../../common/common.scss'
 import MenuUsuario from '../../../components/menuusuario'
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { enviarEmailContato } from '../../../api/adminApi';
+import { toast } from 'react-toastify';
 
 
 export default function LadingPage() {
     const navigate = useNavigate();
+    const [erro, setErro] = useState();
+    const [carregando, setCarregando] = useState(false);
+    const [nome, setNome] = useState();
+    const [email, setEmail] = useState();
+    const [texto, setTexto] = useState();
 
-    function irFeed(){
-        navigate('/usuario/feed');
+    async function emailEnviado() {
+        setCarregando(true);
+        try {
+            const resp = await enviarEmailContato(nome, email, texto);
+            toast.success("Email enviado com sucesso!", {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+            setNome("");
+            setEmail("");
+            setTexto("");
+
+        } catch (err) {
+            setCarregando(false);
+            if (err.response.status === 401)
+                setErro(err.response.data.erro);
+        }
     }
 
 
+    function irFeed() {
+        navigate('/usuario/feed');
+    }
 
     return (
         <main className='container-lading'>
@@ -34,7 +65,7 @@ export default function LadingPage() {
                 <h1>SOBRE NÓS</h1>
 
                 <div className='sub2-caixinhas'>
-                    <div className='sub2-card'>
+                    <div className='sub2-card' id='card1'>
                         <h3>Sub-Titulo</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                     </div>
@@ -60,8 +91,9 @@ export default function LadingPage() {
                     <h1 className='sub3-h1'>FEED</h1>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut i...</p>
-
-                    <button className='botao-feed'  onClick={irFeed} >FEED</button>
+                    <div className='div-botaof'>
+                        <button className='botao-feed' onClick={irFeed} >FEED</button>
+                    </div>
                 </div>
 
             </div>
@@ -79,18 +111,16 @@ export default function LadingPage() {
                 </div>
 
                 <div className='sub-form'>
-                    <input placeholder='Insira seu nome' />
-                    <input placeholder='Insira seu email' />
-                    <textarea placeholder='Insira sua mensagem'></textarea>
-                    <button className='botao-enviar'>Enviar</button>
+                    <input placeholder='Insira seu nome' value={nome} onChange={e => setNome(e.target.value)} />
+                    <input placeholder='Insira seu email' value={email} onChange={e => setEmail(e.target.value)} />
+                    <textarea placeholder='Insira sua mensagem' value={texto} onChange={e => setTexto(e.target.value)} ></textarea>
+                    <button className='botao-enviar' onClick={emailEnviado} disabled={carregando} >Enviar</button>
                 </div>
             </div>
-
 
             <div className='container-rodape'>
 
             </div>
-
         </main>
     )
 }

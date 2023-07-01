@@ -81,14 +81,26 @@ export function buscarImagem(imagem) {
     return `${api.getUri()}/${imagem}`
 }
 
-export async function enviarEmail(nome,de,assunto,texto, telefone){
+export async function enviarEmail(nome, email, assunto, texto, telefone){
     const resposta = await api.post('/enviarEmail', {
         nome:nome,
-        from:de,
+        from:email,
         subject:assunto,
         text:texto,
         telefone:telefone,
         to:"iago.tangara5663@gmail.com"
+    })
+    return resposta.data;
+}
+
+export async function enviarEmailContato(nome, email, texto){
+    const resposta = await api.post('/enviarEmailContato', {
+        nome:nome,
+        to:"iago.tangara5663@gmail.com",
+        subject:'Contato',
+        text:texto,
+        from:email
+        
     })
     return resposta.data;
 }

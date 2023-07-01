@@ -2,7 +2,7 @@ import { alterarImagem, atualizarProduto, deletarProduto, inserirProduto, listar
 import { Router } from 'express';
 import multer from 'multer'
 import nodemailer from 'nodemailer'
-import { SMTP_CONFIG } from '../config/smtp.js';
+import { SMTP_CONFIG, SMTP_CONFIGCONTATO } from '../config/smtp.js';
 
 
 const server = Router();
@@ -191,7 +191,52 @@ server.post('/enviarEmail', (req, resp) => {
             from: `${nome} <${from}>`,
             to: to,
             subject: subject,
-            text: `${text} <br/>*${telefone}*`,
+            text: `${text} *${telefone}*`,
+        })
+
+        if (!from)
+            throw new Error('Email é obrigatório!');
+
+        else if (!to)
+            throw new Error('Erro no recipiente do email');
+
+        else if (!subject)
+            throw new Error("Assunto é obrigatório!");
+
+        else if (!text)
+            throw new Error("Texto é obrigatório!");
+
+        else
+            resp.status(204).send();
+
+    } catch (err) {
+        resp.status(401).send({
+            erro: err.message
+        })
+    }
+})
+
+server.post('/enviarEmailContato', (req, resp) => {
+    try {
+        const { nome, from, to, subject, text } = req.body;
+        const transport = nodemailer.createTransport({
+            host: SMTP_CONFIGCONTATO.host,
+            port: SMTP_CONFIGCONTATO.port,
+            secure: false,
+            auth: {
+                user: SMTP_CONFIGCONTATO.user,
+                pass: SMTP_CONFIGCONTATO.pass
+            },
+            tls: {
+                rejectUnauthorized: false
+            }
+        })
+
+        transport.sendMail({
+            from: `${nome} <${from}>`,
+            to: `${to}`,
+            subject: subject,
+            text: `${text}`,
         })
 
 
